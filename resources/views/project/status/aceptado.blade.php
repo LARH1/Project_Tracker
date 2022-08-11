@@ -9,8 +9,14 @@
     <link href="{{ asset('css/project.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <title>Proyecto - Tracking</title>
 </head>
+<style>
+    .step-disabled {
+        color: gray !important;
+    }
+</style>
 
 <body>
     <div class="container">
@@ -29,46 +35,45 @@
                 </article>
                 <div class="track">
                     <div class="step active">
-                        <span class="icon"> 
+                        <span class="icon">
                             <i class="fa fa-check"></i>
                         </span>
-                        <span class="text">Aceptado</span> 
+                        <span class="text">Aceptado</span>
                     </div>
-                    <div class="step active">
+                    <div class="step {{$proyecto->estado>=2?'active':'step-disabled'}}">
                         <span class="icon">
                             <i class="fa fa-spinner"></i>
                         </span>
-                        <span class="text"> Picked by courier</span> 
+                        <span class="text">Fase I en proceso</span>
                     </div>
-                    <div class="step active">
+                    <div class="step {{$proyecto->estado>=5?'active':'step-disabled'}}">
                         <span class="icon">
                             <i class="fa fa-download"></i>
                         </span>
-                        <span class="text"> Picked by courier</span> 
+                        <span class="text">Terminado</span>
                     </div>
-                    <div class="step active">
+                    <div class="step {{$proyecto->estado>=6?'active':'step-disabled'}}">
                         <span class="icon">
                             <i class="fa fa-spinner"></i>
                         </span>
-                        <span class="text"> Picked by courier</span> 
+                        <span class="text"> Fase II en proceso</span>
                     </div>
-                    <div class="step active">
+                    <div class="step {{$proyecto->estado>=10?'active':'step-disabled'}}">
                         <span class="icon">
                             <i class="fa fa-check"></i>
                         </span>
-                        <span class="text"> Terminado</span> 
+                        <span class="text"> Terminado</span>
                     </div>
                 </div>
                 <br>
                 <br>
                 <hr>
+                <ul class="row">
                 <form action="/project/cambiar" method="post">
                     <input required type="hidden" name="p_id" id="p_id" value="{{$proyecto->id}}">
                     <input required type="hidden" name="estado" id="estado" value="{{$proyecto->estado}}">
                     <button type="submit" class="btn btn-primary">Cambiar</button>
                 </form>
-                <ul class="row">
-                {{$proyecto->estado}}
                     <div class="col col-lg-8 bg-danger1 mx-auto bo">
                         <!-- Pago inicial pendeinte -->
                         @if($proyecto->estado==0)
@@ -207,5 +212,11 @@
         </article>
     </div>
 </body>
+<script>
+    $("#btnDownload").click(function() {
+        let id = $("#p_clid").val();
+        window.open("project/download/f2/" + id, '_blank');
+    });
+</script>
 
 </html>
