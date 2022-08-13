@@ -18,7 +18,7 @@ Route::get('/', function ()
 {
     return view('welcome');
 });
-
+Route::get("test", [ProjectController::class,"Test"]);
 Route::get("project/status/{id}", [ProjectController::class, "Status"]);
 Route::post("project/inipay", [ProjectController::class, "PagoInicial"]);
 Route::post("project/cambiar", [ProjectController::class, "Cambiar"]);
