@@ -34,6 +34,21 @@ class ProjectController extends Controller
     ];
 
     /**
+     * Prueba
+     */
+    public function Test()
+    {
+        try
+        {
+            return "ok";
+        }
+        catch (Exception $e)
+        {
+            dd($e);
+        }
+    }
+
+    /**
      * Obtiene el estado actual de proyecto y muestra la vista correspondiente
      */
     public function Status($id)
@@ -144,11 +159,12 @@ class ProjectController extends Controller
                 ->where("tipo", 1) // fase1
                 ->first();
             // Comprobar estado
-            $aux_fecha = explode(" ", $descarga->fecha_descarga)[0];
-            $fecha = Fecha::FechaCompleta($aux_fecha, "-", " de ", " del ");
-            $hora = explode(" ", $descarga->fecha_descarga)[1];
+            if ($project->estado < 5) return view("errors.404"); // No disponible
             if ($project->estado > 5)
             {
+                $aux_fecha = explode(" ", $descarga->fecha_descarga)[0];
+                $fecha = Fecha::FechaCompleta($aux_fecha, "-", " de ", " del ");
+                $hora = explode(" ", $descarga->fecha_descarga)[1];
                 return view(
                     "project.status.descargado1",
                     compact("project", "descarga", "fecha", "hora")
@@ -217,7 +233,10 @@ class ProjectController extends Controller
             $descarga = Descarga::where("proyecto_id", $project->id)
                 ->where("tipo", 2) // fase2
                 ->first();
-            if ($project->estado != 9)
+
+            if ($project->estado < 9) return view("errors.404"); // No disponible
+
+            if ($project->estado > 9)
             {
                 // Comprobar estado
                 $aux_fecha = explode(" ", $descarga->fecha_descarga)[0];
@@ -268,9 +287,9 @@ class ProjectController extends Controller
         try
         {
             $project = Project::find($request->p_id);
-            $asd=$request->estado+1;
-            if($asd>=11) $asd=0;
-            $project->estado =$asd;
+            $asd = $request->estado + 1;
+            if ($asd >= 11) $asd = 0;
+            $project->estado = $asd;
             $project->update();
             return redirect(
                 "project/status/" . $project->clave
