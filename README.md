@@ -1,64 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Project Tracking
+
+Project Tracking es una web para dar seguimiento a proyectos y revisión de pagos.
+
+### Inicio de proyecto
+
+El proyecto es aceptado y se espera el pago inicial.
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066385-b236302b-3b96-4024-90aa-e16ac1e09ad0.png" alt="Inicio">
 </p>
 
-## About Laravel
+### Revisión de pago
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El pago está en revisión y pendiente por ser aprobado.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066575-eefa7c47-b429-4354-9e4b-18f4e0720f58.png" alt="Revision">
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Pago Aprobado
 
-## Learning Laravel
+Cuando el pago es aceptado, el proyecto estará en proceso.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066633-4a0547d0-3750-4422-acad-5eaa634b74b7.png" alt="Aprobado">
+</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Descargar Avance
 
-## Laravel Sponsors
+Al finalizar la primera fase del desarrollo, se podrá descargar el avance del mismo.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066692-fc29bb50-3301-457f-8961-18135c269790.png" alt="Descargar">
+</p>
 
-### Premium Partners
+## Proyecto Finalizado
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Terminando todas las fases y aprobando los correspondientes pagos se podrá concluir el desarrollo del proyecto.
 
-## Contributing
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066888-0671b0a4-694c-46d7-8037-202fa2beacf9.png" alt="Finalizado">
+</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Si se quiere descargar una parte del proyecto mas de una vez, se mostrará un aviso de que ya ha sido descargado anteriormente.
 
-## Code of Conduct
+<p align="center">
+  <img width="700" src="https://user-images.githubusercontent.com/42705449/226066941-446e57c9-1860-412f-8e53-2b126004b407.png" alt="Ya Descargado">
+</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Tecnología Usadas
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   [Bootstrap](https://getbootstrap.com/)
+-   [FontAwesome](https://fontawesome.com/)
+-   [Laravel](https://laravel.com/)
