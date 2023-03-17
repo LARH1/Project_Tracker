@@ -21,7 +21,7 @@
 <body>
     <div class="container">
         <article class="card">
-            <header class="card-header"> Proyectos / Tracking </header>
+            <header class="card-header project-title"> Proyectos / Tracking </header>
             <div class="card-body">
                 <article class="card">
                     <div class="card-body row">
@@ -69,11 +69,6 @@
                 <br>
                 <hr>
                 <ul class="row">
-                <form action="/project/cambiar" method="post">
-                    <input required type="hidden" name="p_id" id="p_id" value="{{$proyecto->id}}">
-                    <input required type="hidden" name="estado" id="estado" value="{{$proyecto->estado}}">
-                    <button type="submit" class="btn btn-primary">Cambiar</button>
-                </form>
                     <div class="col col-lg-8 bg-danger1 mx-auto bo">
                         <!-- Pago inicial pendeinte -->
                         @if($proyecto->estado==0)
@@ -207,6 +202,12 @@
                         @endif
                     </div>
                 </ul>
+                <form action="/project/cambiar" method="post" class="text-right">
+                    <input required type="hidden" name="p_id" id="p_id" value="{{$proyecto->id}}">
+                    <input required type="hidden" name="estado" id="estado" value="{{$proyecto->estado}}">
+                    <span class="text-muted">Solo para prueba</span>
+                    <button class="btn btn-warning mr-0">Cambiar Estado</button>
+                </form>
                 <hr>
             </div>
         </article>

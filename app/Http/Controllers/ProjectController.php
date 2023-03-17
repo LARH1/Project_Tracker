@@ -44,7 +44,7 @@ class ProjectController extends Controller
         }
         catch (Exception $e)
         {
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -70,7 +70,6 @@ class ProjectController extends Controller
         }
         catch (Exception $e)
         {
-            dd($e);
             return view("errors.500");
         }
     }
@@ -106,7 +105,7 @@ class ProjectController extends Controller
         catch (Exception $e)
         {
             DB::rollBack();
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -142,7 +141,7 @@ class ProjectController extends Controller
         catch (Exception $e)
         {
             DB::rollBack();
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -184,7 +183,7 @@ class ProjectController extends Controller
         catch (Exception $e)
         {
             DB::rollBack();
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -217,7 +216,7 @@ class ProjectController extends Controller
         }
         catch (Exception $e)
         {
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -262,7 +261,7 @@ class ProjectController extends Controller
         catch (Exception $e)
         {
             DB::rollBack();
-            dd($e);
+            return view("errors.500");
         }
     }
 
@@ -273,9 +272,6 @@ class ProjectController extends Controller
      */
     public function index(Request $request)
     {
-        // dd($request->id);
-        // dd($request->id);
-        dd($request->has("tk"));
         return view("project");
     }
 
@@ -297,7 +293,7 @@ class ProjectController extends Controller
         }
         catch (Exception $e)
         {
-            dd($e);
+            dd($e->getMessage());
         }
     }
 }

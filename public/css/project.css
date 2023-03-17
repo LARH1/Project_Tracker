@@ -130,3 +130,9 @@ p {
     border-color: #3f5da8;
     border-radius: 1px;
 }
+
+.project-title
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
